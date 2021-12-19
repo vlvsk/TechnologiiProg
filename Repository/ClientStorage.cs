@@ -6,16 +6,14 @@ namespace TechnologiiProg.Repository
 {
     public class ClientStorage
     {
-        private readonly Dictionary<int, Client> _clients = new();
+        private Dictionary<int, Client> _clients { get; } = new Dictionary<int, Client>();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public Client Create(Client client)
+        public void Create(Client client)
         {
-            var clientId = _clients.Keys.Max() + 1;
-            client.Id = clientId;
+            
             _clients.Add(client.Id, client);
-            return client;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery

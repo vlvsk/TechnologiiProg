@@ -6,16 +6,15 @@ namespace TechnologiiProg.Repository
 {
     public class RegistryStorage
     {
-        private readonly Dictionary<int, Registry> _registrys = new();
+        private Dictionary<int, Registry> _registrys { get; } = new Dictionary<int, Registry>();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public Registry Create(Registry registry)
+        public void Create(Registry registry)
         {
-            var registryId = _registrys.Keys.Max() + 1;
-            registry.Id = registryId;
+
             _registrys.Add(registry.Id, registry);
-            return registry;
+
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery

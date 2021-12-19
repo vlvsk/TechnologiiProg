@@ -6,16 +6,14 @@ namespace TechnologiiProg.Repository
 {
     public class DataBaseRecordsStorage
     {
-        private readonly Dictionary<int, DataBaseRecords> _dataRecs = new();
+        private Dictionary<int, DataBaseRecords> _dataRecs { get; } = new Dictionary<int, DataBaseRecords>();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public DataBaseRecords Create(DataBaseRecords dataRec)
+        public void Create(DataBaseRecords dataRec)
         {
-            var dataRecId = _dataRecs.Keys.Max() + 1;
-            dataRec.Id = dataRecId;
+
             _dataRecs.Add(dataRec.Id, dataRec);
-            return dataRec;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery

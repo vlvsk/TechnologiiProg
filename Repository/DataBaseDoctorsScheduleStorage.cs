@@ -6,16 +6,14 @@ namespace TechnologiiProg.Repository
 {
     public class DataBaseDoctorsScheduleStorage
     {
-        private readonly Dictionary<int, DataBaseDoctorsSchedule> _dataSchedules = new();
+        private Dictionary<int, DataBaseDoctorsSchedule> _dataSchedules { get; } = new Dictionary<int, DataBaseDoctorsSchedule>();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public DataBaseDoctorsSchedule Create(DataBaseDoctorsSchedule dataSchedule)
+        public void Create(DataBaseDoctorsSchedule dataSchedule)
         {
-            var dataScheduleId = _dataSchedules.Keys.Max() + 1;
-            dataSchedule.Id = dataScheduleId;
+            
             _dataSchedules.Add(dataSchedule.Id, dataSchedule);
-            return dataSchedule;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
