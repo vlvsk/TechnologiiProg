@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-20T13:59:08.520Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="dZVv93Kqsc0COhVCbTtO" version="16.0.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-12-20T14:01:45.783Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="4-z0zUdl1i2Bcf6Xl152" version="16.0.0" type="github" pages="3">
   <diagram id="oloi14bdkBVaeS-4npIr" name="Страница 1">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -562,7 +562,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VEkT8N_NZNKEC7_w2fso" name="Страница 3">
-    <mxGraphModel dx="1240" dy="1812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="1619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="5r9bQnYWZ89f7sxct9n0-0" />
         <mxCell id="5r9bQnYWZ89f7sxct9n0-1" parent="5r9bQnYWZ89f7sxct9n0-0" />
@@ -629,7 +629,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5r9bQnYWZ89f7sxct9n0-20" value="Pasport:integer" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="5r9bQnYWZ89f7sxct9n0-18" vertex="1">
+        <mxCell id="5r9bQnYWZ89f7sxct9n0-20" value="Pasport:nvarchar(20)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="5r9bQnYWZ89f7sxct9n0-18" vertex="1">
           <mxGeometry x="30" width="170" height="30" as="geometry">
             <mxRectangle width="170" height="30" as="alternateBounds" />
           </mxGeometry>
