@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class RegistryStorage
     {
-        private Dictionary<int, Registry> _registrys { get; } = new Dictionary<int, Registry>();
+        private Dictionary<int, Registry> _registrys = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 

@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class DataBaseDocumentsStorage
     {
-        private Dictionary<int, DataBaseDocuments> _dataDocs { get; } = new Dictionary<int, DataBaseDocuments>();
+        private Dictionary<int, DataBaseDocuments> _dataDocs  = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
