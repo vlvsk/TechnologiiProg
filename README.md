@@ -101,7 +101,7 @@
 ```csharp
     public class ClientStorage
     {
-        private Dictionary<int, Client> _clients  = new ();
+        private readonly Dictionary<int, Client> _clients  = new ();
 
         public void Create(Client client)
         {
