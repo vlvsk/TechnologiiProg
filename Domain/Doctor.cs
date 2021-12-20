@@ -6,7 +6,7 @@ namespace TechnologiiProg.Domain
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string Post { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
     }
 }

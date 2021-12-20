@@ -5,9 +5,9 @@ namespace TechnologiiProg.Domain
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string MedicalBook { get; set; }
-        public int Pasport { get; set; }
-        public int Phone { get; set; }
-        public int Snils { get; set; }
+        public string Pasport { get; set; }
+        public string Phone { get; set; }
+        public string Snils { get; set; }
         public int TypeRecord { get; set; }
 
     }
