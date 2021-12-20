@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class DataBasePaymentsStorage
     {
-        private Dictionary<int, DataBasePayments> _dataPays = new ();
+        private readonly Dictionary<int, DataBasePayments> _dataPays = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 

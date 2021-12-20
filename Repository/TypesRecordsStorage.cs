@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class TypesRecordsStorage
     {
-        private Dictionary<int, TypesRecords> _typesRecs = new ();
+        private readonly Dictionary<int, TypesRecords> _typesRecs = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 

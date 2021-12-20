@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class DataBaseDoctorsScheduleStorage
     {
-        private Dictionary<int, DataBaseDoctorsSchedule> _dataSchedules  = new ();
+        private readonly Dictionary<int, DataBaseDoctorsSchedule> _dataSchedules  = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 

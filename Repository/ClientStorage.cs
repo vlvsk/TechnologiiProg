@@ -6,7 +6,7 @@ namespace TechnologiiProg.Repository
 {
     public class ClientStorage
     {
-        private Dictionary<int, Client> _clients = new ();
+        private readonly Dictionary<int, Client> _clients = new ();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
