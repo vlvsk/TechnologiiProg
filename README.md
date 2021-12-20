@@ -67,6 +67,7 @@
 ***
 ### 3.2 Реализация системы <a name="реализация"></a>
 На основании ER-диаграммы создали классы. Примеры классов "Клиент" и "Документы" представленны на листингах 1 и 2 соответственно.
+
 Листинг 1 - Класс "Клиент"
 ```csharp
     public class Client
@@ -90,6 +91,138 @@
         public int Doctor { get; set; }
         public int Registry { get; set; }
 
+    }
+```
+
+Затем отпределили где они будут храниться, создав репозитории, пример на листинге 3. Также на листинге 4 представлено общее хранилище.
+
+Листинг 3 - Репрезиторий для класса "Клиент"
+```csharp
+    public class ClientStorage
+    {
+        private Dictionary<int, Client> _clients { get; } = new Dictionary<int, Client>();
+
+        public void Create(Client client)
+        {
+            _clients.Add(client.Id, client);
+        }
+
+        public Client Read(int clientId)
+        {
+            return _clients[clientId];
+        }
+
+        public Client Update(int clientId, Client newClient)
+        {
+            _clients[clientId] = newClient;
+            return _clients[clientId];
+        }
+
+        public bool Delete(int clientId)
+        {
+            return _clients.Remove(clientId);
+        }
+    }
+```
+Листинг 4 - Общеее хранилище
+```csharp
+    public class Storage
+    {
+        public static readonly ClientStorage ClientStorage = new();
+        public static readonly DoctorStorage DoctorStorage = new();
+        public static readonly RegistryStorage RegistryStorage = new();
+        public static readonly TypesRecordsStorage TypesRecordsStorage = new();
+        public static readonly DataBaseRecordsStorage DataBaseRecordsStorage = new();
+        public static readonly DataBasePaymentsStorage DataBasePaymentsStorage = new();
+        public static readonly DataBaseDocumentsStorage DataBaseDocumentsStorage = new();
+        public static readonly DataBaseDoctorsScheduleStorage DataBaseDoctorsScheduleStorage = new();
+    }
+```
+Разработали набор web-методов, включая 4 базисные операции CRUD, для каждой сущности, отражающих предметную область. Примеры контроллеров для классов "Клиент" и "Документы" представлены на листингах 5 и 6.
+
+Листинг 5 - Контроллер для класса "Клиент"
+```csharp
+    [ApiController]
+    [Route("/client")]
+    public class ClientController : ControllerBase
+    {
+
+        [HttpGet("Recording")]
+        public string Recording(string str)
+        {
+            return str; 
+        }
+
+        [HttpGet("Payment")]
+        public string Payment(string str)
+        {
+            return str;
+        }
+
+
+        [HttpGet("DocumentsCL")]
+        public string DocumentsCL(string str)
+        {
+            return str;
+        }
+
+        [HttpPut]
+        public Client Create(Client client)
+        {
+            Storage.ClientStorage.Create(client);
+            return Storage.ClientStorage.Read(client.Id);
+        }
+
+        [HttpGet]
+        public Client Read(int Id)
+        {
+            return Storage.ClientStorage.Read(Id);
+        }
+
+        [HttpPatch]
+        public Client Update(int Id, Client newClient)
+        {
+            return Storage.ClientStorage.Update(Id, newClient);
+        }
+
+        [HttpDelete]
+        public bool Delete(int Id)
+        {
+            return Storage.ClientStorage.Delete(Id);
+        }
+    }
+```
+Листинг 6 - Контроллер для класса "Документы"
+```csharp
+    [ApiController]
+    [Route("/dataBaseDocuments")]
+    public class DataBaseDocumentsController : ControllerBase
+    {
+
+        [HttpPut("Create")]
+        public DataBaseDocuments Create(DataBaseDocuments dataDoc)
+        {
+            Storage.DataBaseDocumentsStorage.Create(dataDoc);
+            return Storage.DataBaseDocumentsStorage.Read(dataDoc.Id);
+        }
+
+        [HttpGet("Read")]
+        public DataBaseDocuments Read(int Id)
+        {
+            return Storage.DataBaseDocumentsStorage.Read(Id);
+        }
+
+        [HttpPatch("Update")]
+        public DataBaseDocuments Update(int Id, DataBaseDocuments newDataDoc)
+        {
+            return Storage.DataBaseDocumentsStorage.Update(Id, newDataDoc);
+        }
+
+        [HttpDelete("Delete")]
+        public bool Delete(int Id)
+        {
+            return Storage.DataBaseDocumentsStorage.Delete(Id);
+        }
     }
 ```
 
