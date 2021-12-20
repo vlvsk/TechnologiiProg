@@ -65,16 +65,39 @@
 <p align="center">Рисунок 4 - Диаграмма «сущность-связь»</p> 
 
 ***
-
 ### 3.2 Реализация системы <a name="реализация"></a>
+На основании ER-диаграммы создали классы. Примеры классов "Клиент" и "Документы" представленны на листингах 1 и 2 соответственно.
+Листинг 1 - Класс "Клиент"
+```csharp
+    public class Client
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string MedicalBook { get; set; }
+        public string Pasport { get; set; }
+        public string Phone { get; set; }
+        public string Snils { get; set; }
+        public int TypeRecord { get; set; }
+
+    }
+```
+Листинг 2 - Класс "Документы"
+```csharp
+    public class DataBaseDocuments
+    {
+        public int Id { get; set; }
+        public int Client { get; set; }
+        public int Doctor { get; set; }
+        public int Registry { get; set; }
+
+    }
+```
 
 ***
 ## 4 Тестирование <a name ="тестирование"></a>
 
 ***
-
 ## Заключение <a name="заключение"></a>
 
 ***
-
 ## Cписок литературы <a name="список_литературы"></a>  
