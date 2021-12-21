@@ -79,8 +79,6 @@
         public string Pasport { get; set; }
         public string Phone { get; set; }
         public string Snils { get; set; }
-        public int TypeRecord { get; set; }
-
     }
 ```
 Листинг 2 - Класс "Документы"
@@ -91,7 +89,6 @@
         public int Client { get; set; }
         public int Doctor { get; set; }
         public int Registry { get; set; }
-
     }
 ```
 
