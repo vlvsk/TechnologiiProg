@@ -226,6 +226,90 @@
 
 ***
 ## 4 Тестирование <a name ="тестирование"></a>
+После запуска программы открывается страница Swagger UI со списком сущностей и операций над ними (см. рисунок 5).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956844-0b57b8d2-337e-4626-b22c-30e553d4f05f.PNG"</p>
+<p align="center">Рисунок 5 - Cтраница Swagger UI</p> 
+
+Проверка работы методов CRUD (Create - создание, Read - чтение, Update - обновление, Delete - удаление) в сущности Client (см. рисунок 6).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956864-e0fa4561-db66-42cb-873f-9c54699e8641.PNG"</p>
+<p align="center">Рисунок 6 -Проверка работы методов CRUD</p> 
+
+1) Create позволяет добавлять новые строки в вашу таблицу (см. рисунок 7).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956875-4381d2c0-b689-48f2-8095-02e7ac165777.PNG"</p>
+<p align="center">Рисунок 7 - Окно метода создания</p> 
+
+Ввод необходимых данных об покупателе в соответствующие поля (см. рисунок 8).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956897-899927fe-1e86-42a4-a7ad-eda8bf21dae2.PNG"</p>
+  <p align="center">Рисунок 8 - Работа с методом создания</p>
+  
+  После успешного выполнения операции сервер выдаёт ответ (см. рисунок 9).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956936-7be31874-8f6e-4e11-bd5d-5efa339a8b48.PNG"</p>
+  <p align="center">Рисунок 9 - Результат выполнения операции создания</p> 
+  
+  2) Функция чтения Read похожа на функцию поиска, поскольку позволяет извлекать определенные записи и считывать их значения (см. рисунок 10).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956945-ded71b33-5ddd-4fab-ad76-c8bcc780b6e7.PNG"</p>
+  <p align="center">Рисунок 10 - Окно функции чтения</p> 
+  
+  Считывание информации об уже созданном клиенте по его Id (см. рисунок 11).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956958-d0b6fe76-af0f-4705-85ab-b837c4947957.PNG"</p>
+  <p align="center">Рисунок 11 - Работа с методом чтения</p> 
+  
+  После выполнения операции сервер выдаёт информацию о клиенте, которая была создана в Create (см. рисунок 12).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956973-99223e8d-f952-411e-81c4-6ea9862d5c52.PNG"</p>
+  <p align="center">Рисунок 12 - Результат выполнения операции чтения</p> 
+  
+  3) Update, редактирование записи (см. рисунок 13). Используется для изменения существующих записей в базе данных.
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956985-9148557e-0846-4822-9bb4-cb47204f9914.PNG"</p>
+  <p align="center">Рисунок 13 - Окно метода обновления</p> 
+  
+  Изменение информации о клиенте, для этого сначала нужно ввести его номер и затем новые данные (см. рисунок 14).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146956998-0cc75816-3118-41d8-b91b-1c2522bb3958.PNG"</p>
+  <p align="center">Рисунок 14 - Работа с методом обновления</p> 
+  
+  После выполнения операции сервер выдаёт новую информацию о том же клиенте (см. рисунок 15).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957024-3d84c045-69b6-4bb9-8d03-88e6107027cf.PNG"</p>
+  <p align="center">Рисунок 15 - Результат выполнения операции обновления</p> 
+  
+  Функцией read проверка вышеуказанной операции. После срабатывания сервер выдает новую информацию о клиенте (см. рисунок 16).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957050-8e1601f8-4573-4713-99c1-66b05211e54f.PNG"</p>
+  <p align="center">Рисунок 16 - Результат выполнения операции чтения после обновления данных</p> 
+  
+  4) Delete - используется для удаления записи по Id. Если операция удаления сработает успешно, то ответ сервера будет "true", иначе "false" (см. рисунок 17).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957061-b1eae035-f071-40f3-9942-18fe3248c472.PNG"</p>
+  <p align="center">Рисунок 17 - Окно метода удаления</p> 
+  
+  Удаление клиента по его Id (см. рисунок 18).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957155-86b97569-b7fc-4670-80b5-d93e7e1da42e.PNG"</p>
+  <p align="center">Рисунок 18 - Работа с методом удаления</p> 
+  
+  После выполнения операции ответ сервера (см. рисунок 19).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957177-0a7fd6c0-59ba-48b0-8104-a27f1359b5f9.PNG"</p>
+  <p align="center">Рисунок 19 - Раезультат выполнения метода удаления</p> 
+  
+  Проверка вышеописанного действия с помощью read, считывание информацию об удалённом клиенте (см. рисунок 20).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957187-f2e54174-84f5-4648-96fb-f6af529dbb6a.PNG"</p>
+  <p align="center">Рисунок 20 - Работа с операцией чтения</p> 
+  
+  После срабатывания программа не выдаёт информации об этом клиенте (см. рисунок 21).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/90554731/146957198-75996dd6-c9fb-4135-92ac-72b79aa61753.PNG"</p>
+  <p align="center">Рисунок 21 - Результат выполнения операции чтения после удаления данных</p>
 
 ***
 ## Заключение <a name="заключение"></a>
