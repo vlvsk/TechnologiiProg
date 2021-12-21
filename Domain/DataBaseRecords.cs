@@ -9,6 +9,7 @@ namespace TechnologiiProg.Domain
         public int Doctor { get; set; }
         public int Registry { get; set; }
         public string Refusal { get; set; }
+        public int TypesRecords { get; set; }
 
     }
 }

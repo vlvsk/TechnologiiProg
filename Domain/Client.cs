@@ -9,7 +9,6 @@ namespace TechnologiiProg.Domain
         public string Pasport { get; set; }
         public string Phone { get; set; }
         public string Snils { get; set; }
-        public int TypeRecord { get; set; }
 
     }
 }
